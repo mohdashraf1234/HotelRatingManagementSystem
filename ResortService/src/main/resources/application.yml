@@ -1,0 +1,35 @@
+server:
+  port: 9097   
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservicesdb2
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+
+
+  application:
+        name: RESORT-SERVICE
+        
+  
+  config:
+    import: optional:configserver:http://localhost:8066
+  
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+ 
